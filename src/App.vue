@@ -37,7 +37,7 @@ export default {
   margin-top: 60px;
 }
 .bg-grey{
-  background-color: whitesmoke;
+  background-color: rgb(226, 220, 220);
 }
   .link{
     color: blue;

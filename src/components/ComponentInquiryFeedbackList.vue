@@ -3,11 +3,11 @@
       <h4>Inquiry Feedback List</h4>
     <div class="mb-2">
       <div class="float-left p-2" style="background-color: whitesmoke">
-        <span>Program</span>
+        <span class="font-weight-bold">Program</span>
         <input class="border" />
       </div>
       <div class="float-right">
-        <button class="btn">Retrieve</button>
+        <button class="btn font-weight-bold">Retrieve</button>
       </div>
     </div>
     <div style="clear:both;"></div>
@@ -73,7 +73,7 @@
       aria-controls="my-table"
     ></b-pagination>
     <h5 style="clear:both;">Feedback Content Detail</h5>
-    <div class="mt-3 border bg-grey">
+    <div class="mt-3 border bg-grey" id="tips">
       <p class="container p-3">
         {{tips}}
       </p>

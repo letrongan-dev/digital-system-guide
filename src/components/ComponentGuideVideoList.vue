@@ -4,11 +4,11 @@
     <h4>Guide Video List</h4>
     <div class="mb-2">
       <div class="float-left p-2" style="background-color: whitesmoke">
-        <span>Program</span>
+        <span class="font-weight-bold">Program</span>
         <input class="border" />
       </div>
       <div class="float-right">
-        <button class="btn">Retrieve</button>
+        <button class="btn font-weight-bold">Retrieve</button>
       </div>
     </div>
     <div style="clear:both;"></div>
@@ -40,7 +40,7 @@
               </tr>
             </tbody>
           </table> -->
-      <BModal :data="data" :showModal="showModal"></BModal>
+      <BModal :data="data" :showModal="showModal" @close="closeModal"></BModal>
     <b-table
        bordered
        responsive
@@ -116,23 +116,22 @@ export default {
   data () {
     return {
       errors: [],
-      items: data,
-      value: null,
+      items: data.map(item => ({...item, showModal: false})),
       data: '',
       showModal: false,
       index: null,
       perPage: 3,
       currentPage: 1,
       fields: [
-        { key: 'checkbox', label: 'Check', visible: true },
+        { key: 'checkbox', label: 'Check', thStyle: 'width: 10px', thClass: 'bg-grey', visible: true },
         { key: 'programId', visible: false },
-        { key: 'program', label: 'Program', visible: true },
-        { key: 'fileName', label: 'File Name', visible: true },
-        { key: 'remark', label: 'Remark', visible: true },
+        { key: 'program', label: 'Program', thStyle: 'width: 200px', thClass: 'bg-grey', visible: true },
+        { key: 'fileName', label: 'File Name', thStyle: 'width: 200px', thClass: 'bg-grey', visible: true },
+        { key: 'remark', label: 'Remark', thClass: 'bg-grey', visible: true },
         { key: 'average', visible: false },
         { key: 'count', visible: false },
         { key: 'rating', label: 'Rating', visible: false },
-        { key: 'feedbackContent', label: 'Feedback Content', visible: false },
+        { key: 'feedbackContent', label: 'Feedback Content', thClass: 'bg-grey', visible: false },
         { key: 'tips', visible: false }
       ],
       selected: [],
@@ -141,12 +140,12 @@ export default {
     }
   },
   methods: {
-    setIndex (index) {
-      this.index = index
-    },
     showVideo (data) {
       this.data = data
       this.showModal = true
+    },
+    closeModal () {
+      this.showModal = false
     },
     submitRating () {
       if (this.selected.length !== 0) {
