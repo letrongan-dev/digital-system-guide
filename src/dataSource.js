@@ -9,7 +9,8 @@ exports.data = [
     count: '33',
     rating: 5,
     feedbackContent: 'Excellent!',
-    tips: 'In case, dangerous cargo, please check whether company accept thoes DG cargo or not in advance '
+    tips: 'In case, dangerous cargo, please check whether company accept thoes DG cargo or not in advance ',
+    files: []
   },
   {
     programId: '2',
@@ -21,7 +22,8 @@ exports.data = [
     count: '33',
     rating: 4,
     feedbackContent: 'Good!',
-    tips: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '
+    tips: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+    files: []
   },
   {
     programId: '3',
@@ -33,7 +35,8 @@ exports.data = [
     count: '33',
     rating: 3,
     feedbackContent: 'Fantastic!',
-    tips: 'In case, dangerous cargo, please check whether company accept thoes DG cargo or not in advance '
+    tips: 'In case, dangerous cargo, please check whether company accept thoes DG cargo or not in advance ',
+    files: []
   },
   {
     programId: '4',
@@ -45,7 +48,8 @@ exports.data = [
     count: '33',
     rating: 2,
     feedbackContent: 'Fantastic!',
-    tips: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '
+    tips: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+    files: []
   },
   {
     programId: '5',
@@ -57,7 +61,8 @@ exports.data = [
     count: '33',
     rating: 1,
     feedbackContent: 'I dont understand!',
-    tips: 'In case, dangerous cargo, please check whether company accept thoes DG cargo or not in advance  '
+    tips: 'In case, dangerous cargo, please check whether company accept thoes DG cargo or not in advance  ',
+    files: []
   },
   {
     programId: '6',
@@ -69,6 +74,7 @@ exports.data = [
     count: '33',
     rating: 4,
     feedbackContent: 'Good!',
-    tips: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '
+    tips: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+    files: []
   }
 ]

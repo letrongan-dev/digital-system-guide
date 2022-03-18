@@ -36,12 +36,18 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-.bg-grey{
-  background-color: rgb(226, 220, 220);
+th{
+  background-color: rgb(206, 236, 247);
 }
-  .link{
-    color: blue;
-    text-decoration-line: underline;
-    cursor: pointer;
-  }
+.inputPrgRmk, .bg-grey {
+  background-color: rgb(203, 209, 211);
+}
+.tips{
+  background-color: rgb(226, 235, 235);
+}
+.link{
+  color: blue;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
 </style>

@@ -12,34 +12,6 @@
     </div>
     <div style="clear:both;"></div>
     <div class="mt-3">
-      <!-- <table class="table table-bordered disable bg-grey">
-          <thead>
-              <tr>
-                  <th scope="col">Program</th>
-                  <th scope="col">Filename</th>
-                  <th scope="col">Average</th>
-                  <th scope="col">Count</th>
-                  <th scope="col">Lowest Rating</th>
-                  <th scope="col">Feedback content</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr v-for="list in items" :key="list.id">
-                  <td>{{list.program}}</td>
-                  <td>{{list.fileName}}</td>
-                  <td>{{list.average}}</td>
-                  <td>{{list.count}}</td>
-                  <td><star-rating v-bind:increment="1"
-                        v-bind:max-rating="5"
-                        v-bind:rating= "list.rating"
-                        inactive-color="whitesmoke"
-                        active-color="orange"
-                        v-bind:star-size="30"
-                        :read-only="true"></star-rating></td>
-                  <td>{{list.feedbackContent}}</td>
-              </tr>
-          </tbody>
-      </table> -->
        <b-table
        class="bg-grey"
        bordered
@@ -57,7 +29,7 @@
        <star-rating v-bind:increment="1"
                         v-bind:max-rating="5"
                         v-bind:rating= "data.item.rating"
-                        inactive-color="whitesmoke"
+                        inactive-color="rgb(203, 209, 211)"
                         active-color="orange"
                         v-bind:star-size="30"
                         :read-only="true">

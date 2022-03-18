@@ -1,45 +1,17 @@
 <template>
 <div>
-  <!-- <CoolLightBox :items="items" :index="index" @close="index = null"></CoolLightBox> -->
     <h4>Guide Video List</h4>
     <div class="mb-2">
-      <div class="float-left p-2" style="background-color: whitesmoke">
+      <div class="float-left p-2 inputPrgRmk">
         <span class="font-weight-bold">Program</span>
         <input class="border" />
       </div>
       <div class="float-right">
-        <button class="btn font-weight-bold">Retrieve</button>
+        <button class="btn font-weight-bold inputPrgRmk">Retrieve</button>
       </div>
     </div>
     <div style="clear:both;"></div>
     <div class="mt-3">
-      <!-- <table class="table table-bordered">
-            <thead style="background-color: azure">
-              <tr>
-                <th scope="col" style="width: 1px">Chk</th>
-                <th scope="col">Program</th>
-                <th scope="col">Filename</th>
-                <th scope="col">Remark</th>
-              </tr>
-            </thead>
-            <tbody> -->
-              <!-- <tr class="bg-grey" v-for="(image, imageIndex) in items"
-                  :key="imageIndex">
-                <th style="background-color: white"><input type="checkbox" /></th>
-                <td>{{image.nameUI}}</td>
-                <td class="image link"
-                  @click="index = imageIndex"
-                  :style="{ backgroundImage: 'url(' + image.thumb + ')' }">{{image.fileName}}</td>
-                <td>{{image.remark}}</td>
-              </tr> -->
-              <!-- <tr v-for="list in items" :key="list.id">
-                <td style="background-color: white"><input type="checkbox"/></td>
-                <td>{{list.nameUI}}</td>
-                <td class="link" @click.prevent="showVideo(list.src)">{{list.fileName}}</td>
-                <td>{{list.remark}}</td>
-              </tr>
-            </tbody>
-          </table> -->
       <BModal :data="data" :showModal="showModal" @close="closeModal"></BModal>
     <b-table
        bordered
@@ -78,7 +50,7 @@
       </p>
     </div>
     <div class="mt-2">
-      <div class="p-1 bg-grey d-flex" style="background-color: rgb(173, 168, 168)">
+      <div class="p-1 tips d-flex">
         <p class="pr-3 pt-3">Selected type feedback</p>
         <star-rating v-bind:increment="1"
             :rating="3"
@@ -123,15 +95,15 @@ export default {
       perPage: 3,
       currentPage: 1,
       fields: [
-        { key: 'checkbox', label: 'Check', thStyle: 'width: 10px', thClass: 'bg-grey', visible: true },
+        { key: 'checkbox', label: 'Check', thStyle: 'width: 10px', visible: true },
         { key: 'programId', visible: false },
-        { key: 'program', label: 'Program', thStyle: 'width: 200px', thClass: 'bg-grey', visible: true },
-        { key: 'fileName', label: 'File Name', thStyle: 'width: 200px', thClass: 'bg-grey', visible: true },
-        { key: 'remark', label: 'Remark', thClass: 'bg-grey', visible: true },
+        { key: 'program', label: 'Program', thStyle: 'width: 200px', visible: true },
+        { key: 'fileName', label: 'File Name', thStyle: 'width: 200px', visible: true },
+        { key: 'remark', label: 'Remark', visible: true },
         { key: 'average', visible: false },
         { key: 'count', visible: false },
         { key: 'rating', label: 'Rating', visible: false },
-        { key: 'feedbackContent', label: 'Feedback Content', thClass: 'bg-grey', visible: false },
+        { key: 'feedbackContent', label: 'Feedback Content', visible: false },
         { key: 'tips', visible: false }
       ],
       selected: [],
