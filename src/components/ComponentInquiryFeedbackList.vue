@@ -13,7 +13,6 @@
     <div style="clear:both;"></div>
     <div class="mt-3">
        <b-table
-       class="bg-grey"
        bordered
        responsive
        id="my-table"
@@ -29,7 +28,7 @@
        <star-rating v-bind:increment="1"
                         v-bind:max-rating="5"
                         v-bind:rating= "data.item.rating"
-                        inactive-color="rgb(203, 209, 211)"
+                        inactive-color="white"
                         active-color="orange"
                         v-bind:star-size="30"
                         :read-only="true">
@@ -45,7 +44,7 @@
       aria-controls="my-table"
     ></b-pagination>
     <h5 style="clear:both;">Feedback Content Detail</h5>
-    <div class="mt-3 border bg-grey" id="tips">
+    <div class="mt-3 border" id="tips">
       <p class="container p-3">
         {{tips}}
       </p>

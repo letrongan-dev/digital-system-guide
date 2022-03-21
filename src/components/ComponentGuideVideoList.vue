@@ -44,7 +44,7 @@
       aria-controls="my-table"
     ></b-pagination>
 
-    <div class="mt-3 border bg-grey" style="clear:both;">
+    <div class="mt-3 border" style="clear:both;">
       <p class="container p-3">
         {{tips}}
       </p>
